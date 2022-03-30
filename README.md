@@ -9,6 +9,9 @@
 
 ## Mudar saida comandos Gitgit 
 
+
+
+
 ```
  git config --global core.pager cat
 ```

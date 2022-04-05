@@ -1,7 +1,7 @@
 # curso22 
 
 ## Associar editores de texto ao Git
-
+estou no dev
 ```
  git config --global core.editor "vim"
 ```

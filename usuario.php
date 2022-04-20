@@ -16,7 +16,7 @@ function lacoWhile($numero) {
         $i++;
     }
     
-    echo "Funcao While: i: {$i} contPares: {$contPares} <br><br>";
+    echo "<b>Funcao While</b>: i: {$i} contPares: {$contPares} <br><br>";
 }
 
 function lacoDoWhile($numero) {
@@ -32,7 +32,7 @@ function lacoDoWhile($numero) {
         $i++;
     } while ($contPares < 5);
     
-    echo "Funcao Do While i: {$i} contPares: {$contPares} <br><br>";
+    echo "<b>Funcao Do While</b>: i: {$i} contPares: {$contPares} <br><br>";
 }
 
 function lacoFOR($numero) {
@@ -46,7 +46,7 @@ function lacoFOR($numero) {
         }
     }
 
-    echo "Funcao FOR: i: {$i} contPares: {$contPares} <br><br>";
+    echo "<b>Funcao FOR</b>: i: {$i} contPares: {$contPares} <br><br>";
 }
 
 
@@ -55,6 +55,8 @@ echo "Data hora inicio: " . date("d/m/Y H:i:s") . "<br><br>";
 lacoWhile($numero);
 lacoDoWhile($numero);
 lacoFOR($numero);
+
+sleep(2);
 
 echo "Data hora fim: " . date("d/m/Y H:i:s");
 

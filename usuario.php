@@ -1,51 +1,62 @@
 <?php
 
-$resto = 0;
 $numero = [4, 2, 5, 1, 10, 100, 50, 3, 9, 12];
 
-$contPares = 6;
-$i = 0;
-// 0 , 1, 2, 3, 4
-while ($contPares < 5) {
+function lacoWhile($numero) {
+    $i = 0;
+    $contPares = 0;
 
-    echo "estou dentro do WHILE e o contPares (6) é: {$contPares} <br>";
-    $resto = $numero[$i] % 2;
-
-    if ($resto == 0) {
-        // $contPares += 1;
-        $contPares++; // 5
+    while ($contPares < 5) {
+        $resto = $numero[$i] % 2;
+    
+        if ($resto == 0) {
+            $contPares++; // $contPares += 1;
+        }
+    
+        $i++;
     }
-
-    $i++; // 7
+    
+    echo "Funcao While: i: {$i} contPares: {$contPares} <br><br>";
 }
 
-echo "i: {$i} <br> contPares: {$contPares}";
+function lacoDoWhile($numero) {
+    $i = 0;
+    $contPares = 0;
+    do {
+        $resto = $numero[$i] % 2;
+    
+        if ($resto == 0) {
+            $contPares++; // $contPares += 1;
+        }
+    
+        $i++;
+    } while ($contPares < 5);
+    
+    echo "Funcao Do While i: {$i} contPares: {$contPares} <br><br>";
+}
 
-echo "<br><br><br><br>";
+function lacoFOR($numero) {
+    $contPares = 0;
+    for ($i = 0; $contPares < 5; $i++) {
 
-do {
-    echo "estou dentro do DO WHILE e o contPares é: {$contPares} <br>";
-    $resto = $numero[$i] % 2;
+        $resto = $numero[$i] % 2;
 
-    if ($resto == 0) {
-        // $contPares += 1;
-        $contPares++; // 5
+        if ($resto == 0) {
+            $contPares++; // $contPares += 1;
+        }
     }
 
-    $i++; // 7
-} while ($contPares < 5);
+    echo "Funcao FOR: i: {$i} contPares: {$contPares} <br><br>";
+}
 
-echo "i: {$i} <br> contPares: {$contPares}";
 
-// if ($resto == 0 && $numero == 2) {
-//     echo "O numero é par e é um {$numero} <br>"; //O numero é par e é um 2
-// } else if ($resto == 0) {
-//     echo "O numero " . $numero . " é impar. <br>"; 
-// }
-//  else {
-//     echo "O numero " . $numero . " é impar. <br>";
-// }
+echo "Data hora inicio: " . date("d/m/Y H:i:s") . "<br><br>";
 
+lacoWhile($numero);
+lacoDoWhile($numero);
+lacoFOR($numero);
+
+echo "Data hora fim: " . date("d/m/Y H:i:s");
 
 
 

@@ -32,7 +32,7 @@
                 <div class="row mb-3"> <!-- $id  -->
                     <label align="center" class="col-md-2 col-sm-12 col-form-label">ID</label>
                         <div class="col-md-2 col-sm-12">
-                            <input type="number" class="form-control" placeholder="select">
+                            <input id="idPessoa" hide type="text" readonly disable="true" class="form-control">
                         </div>
                 </div>
 
@@ -50,7 +50,7 @@
                 <div class="row mb-3"> <!-- $name  -->
                     <label align="center" class="col-md-2 col-sm-12 col-form-label">Name:</label>
                         <div class="col-md-3 col-sm-12">
-                            <input class="form-control" type="text">
+                            <input id="nomePessoa" class="form-control" type="text">
                         </div>
                 </div>
             
@@ -200,48 +200,7 @@
         </div>
         </div>
 
-        <table class="table table-dark table-hover">        
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                        <button class="btnEditar" value="1">Editar</button>
-                        <button class="btnExcluir" value="1">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>
-                        <button class="btnEditar" value="2">Editar</button>
-                        <button class="btnExcluir" value="2">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td colspan="2">aviaozinho</td>
-                    <td>@aerobg</td>
-                </tr>
-            </tbody>
+        <table id="tabelaPessoas"  class="table table-dark table-hover">
         </table>
 
         </div>

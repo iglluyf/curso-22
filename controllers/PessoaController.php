@@ -25,15 +25,30 @@
 
     // echo "oooopppaaa";
 
-    $dadosPessoa = [
-        "id" => 10,
-        "nome" => "Aviaozinho",
-        "status" => "Ativo",
-        "email" => "aviaozinho@curso.com",
-        "phone" => "54 912345678",
-        "gender" => "M",
-        "type" => "CPF",
-        "cep" => "95707110",
+    $idPessoa = $_REQUEST["id"] ?? 0;
+
+    $dadosPessoa = 
+        [
+            [
+                "id" => 10,
+                "name" => "Aviaozinho",
+                "status" => "Ativo",
+                "email" => "aviaozinho@curso.com",
+                "phone" => "54 912345678",
+                "gender" => "M",
+                "type" => "CPF",
+                "cep" => "95707110",
+            ],
+            [
+                "id" => 50,
+                "name" => "Aviaozinhoxxxx",
+                "status" => "Ativo",
+                "email" => "aviaozinhoxxx@curso.com",
+                "phone" => "54 912345678",
+                "gender" => "M",
+                "type" => "CPF",
+                "cep" => "95707110",
+            ]
     ];
 
     header('Content-Type: application/json; charset=utf-8');

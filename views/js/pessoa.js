@@ -18,7 +18,6 @@ $( document ).ready(function() {
             $("#nomePessoa").val(response[0].name);
             $("#staticBackdropLabel").html("Editar");
             $("#staticBackdrop").modal("show");
-            // $("#staticBackdrop").modal("hide"); // fechar o modal
 
         });
     });

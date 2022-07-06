@@ -33,12 +33,12 @@ CREATE TABLE `pessoas` (
   `cep` varchar(8) DEFAULT NULL,
   `telefone` varchar(11) DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT NULL,
-  `updated` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `userupdated` varchar(100) DEFAULT NULL,
-  `created` datetime NOT NULL,
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `usercreated` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,6 +47,7 @@ CREATE TABLE `pessoas` (
 
 LOCK TABLES `pessoas` WRITE;
 /*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
+INSERT INTO `pessoas` VALUES (1,'Ariel','ariel@info.com','12354678910','',0,'M','95700000','999524677',0,'2022-07-05 20:44:41','','2022-07-05 20:44:41','ariel_admin'),(2,'Rodrigo','rubbo@info.com','12354678910','',0,'M','95700000','999528527',0,NULL,'','2022-07-05 20:48:29','ariel_admin'),(3,'Ricier','ricier@info.com','12354678910','',0,'M','95700000','999524566',0,'2022-07-05 20:51:02','','2022-07-05 20:49:38','ariel_admin');
 /*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,4 +64,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-28 21:56:11
+-- Dump completed on 2022-07-05 21:33:59

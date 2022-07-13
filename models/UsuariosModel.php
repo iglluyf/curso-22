@@ -2,18 +2,10 @@
 
 require "../database/Conexao.php"; // require - importa uma vez | require_once - importa toda vez que o arquivo usuários é acessado/chamado.
 
-class PessoaModel
+class UsuarioModel
 {
     private $conexao = null;
     protected $nomeTabela = "usuarios";
-
-    public $id = 0;
-    public $name = "";
-    public $CEP = 0;
-    public $mail = "";
-    public $phone = 0;
-    public $socialweb = "";
-    public $status = true;
 
     public function __construct()
     {
@@ -106,19 +98,3 @@ class PessoaModel
         return $result;
     }
 }
-
-$pessoaModel = new PessoaModel();
-
-$dados = [];
-
-$result = $pessoaModel->listar();
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $dadospessoa[] = $row;
-    }
-}
-
-header('Content-Type: application/json; charset=utf-8');
-echo json_encode($dados);
-exit();
